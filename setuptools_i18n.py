@@ -4,7 +4,7 @@ from distutils.errors import DistutilsSetupError
 
 from setuptools import Command
 
-__version__ = '0.1.0'
+__version__ = '0.1.1'
 
 
 def mkmo(in_file):
