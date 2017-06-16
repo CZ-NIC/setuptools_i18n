@@ -2,11 +2,9 @@ from setuptools import setup
 
 import setuptools_i18n
 
-PROJECT_NAME = 'setuptools_i18n'
-
 
 def main():
-    setup(name=PROJECT_NAME,
+    setup(name='setuptools_i18n',
           version=setuptools_i18n.__version__,
           description='Plugin for setuptools to build and compile i18n files',
           long_description=open('README.md').read(),
