@@ -8,7 +8,12 @@ PROJECT_NAME = 'setuptools_i18n'
 def main():
     setup(name=PROJECT_NAME,
           version=setuptools_i18n.__version__,
+          description='Plugin for setuptools to build and compile i18n files',
+          long_description=open('README.md').read(),
           py_modules=['setuptools_i18n'],
+          author='Tomas Pazderka',
+          author_email='tomas.pazderka@nic.cz',
+          url='https://github.com/CZ-NIC/setuptools_i18n',
           entry_points={
               "distutils.commands": [
                   "build_i18n = setuptools_i18n:build_i18n",
@@ -18,19 +23,18 @@ def main():
               ],
           },
           license='GPLv3',
-          author='Tomas Pazderka',
-          author_email='tomas.pazderka@nic.cz',
           classifiers=[
               'Development Status :: 4 - Beta',
               'Intended Audience :: Developers',
-              'Topic :: Software Development :: Build Tools',
-              'License :: OSI Approved :: GPLv3 License',
+              'License :: OSI Approved :: GNU General Public License v3 (GPLv3)',
+              'Operating System :: OS Independent',
               'Programming Language :: Python :: 2',
               'Programming Language :: Python :: 2.6',
               'Programming Language :: Python :: 2.7',
               'Programming Language :: Python :: 3',
               'Programming Language :: Python :: 3.5',
               'Programming Language :: Python :: 3.6',
+              'Topic :: Software Development :: Build Tools',
           ],
           )
 
