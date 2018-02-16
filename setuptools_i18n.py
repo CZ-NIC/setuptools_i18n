@@ -20,6 +20,12 @@ def validate_i18n(dist, attr, value):
             raise DistutilsSetupError('Filename {} does not exist.'.format(i18n_file))
 
 
+def write_mo(cmd, basename, filename):
+    if cmd.distribution.i18n_files:
+        mo_files = ['%s.mo' % os.path.splitext(mo_file)[0] for mo_file in cmd.distribution.i18n_files]
+        cmd.write_file('i18n files', filename, '\n'.join(mo_files))
+
+
 class build_i18n(Command):
     """Custom command that compiles messages."""
 

@@ -19,6 +19,9 @@ def main():
               "distutils.setup_keywords": [
                   "i18n_files = setuptools_i18n:validate_i18n",
               ],
+              "egg_info.writers": [
+                  "SOURCES.txt = setuptools_i18n:write_mo",
+              ]
           },
           license='GPLv3',
           classifiers=[
